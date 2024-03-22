@@ -51,6 +51,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         databaseHelper = LocationDatabaseHelper(this)
 
+        // ============== INIT METHODS ================
         init()
     }
 
@@ -84,6 +85,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+
     //Stop location button click
     private fun stopLocationButtonClick(){
         binding.btnStop.setOnClickListener {
@@ -111,6 +113,7 @@ class MainActivity : AppCompatActivity() {
             val filePath = file.absolutePath
             createExcelFile(databaseHelper.getLocationEntries(), filePath)
             downloadExcelFile(entries)
+
         }
     }
 
@@ -177,7 +180,7 @@ class MainActivity : AppCompatActivity() {
     companion object {
 
         @SuppressLint("InlinedApi")
-        var permission_s                    =               arrayOf(
+        var permission_s   = arrayOf(
 
             Manifest.permission.ACCESS_FINE_LOCATION,
             Manifest.permission.ACCESS_COARSE_LOCATION,
