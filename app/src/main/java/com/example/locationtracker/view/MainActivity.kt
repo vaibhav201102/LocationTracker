@@ -53,6 +53,7 @@ class MainActivity : AppCompatActivity() {
 
         // ============== INIT METHODS ================
         init()
+
     }
 
 //    override fun onDestroy() {
